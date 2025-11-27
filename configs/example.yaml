@@ -1,0 +1,27 @@
+vocab_size: 256
+dim: 384
+depth: 6
+num_heads: 8
+max_len: 512
+ff_mult: 4
+lr: 0.0003
+base_momentum: 0.9
+ema_decay: 0.95
+grad_clip_norm: 1.0
+batch_size: 32
+seq_len: 128
+steps: 5000
+memory_capacity: 4096
+top_k: 16
+error_decay: 0.98
+surprise_scale: 0.0
+optimizer_type: deep
+model_type: hope
+metrics:
+  track_ppl: true
+  track_accuracy: true
+update_frequencies:
+  mem_write: 5
+  error_update: 1
+  optimizer_step: 1
+debug_anomaly: false
